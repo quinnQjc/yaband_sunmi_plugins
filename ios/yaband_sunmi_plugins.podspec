@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
   s.description      = <<-DESC
 for yaband sunmi plugins
                        DESC
-  s.homepage         = 'http://example.com'
+  s.homepage         = 'https://github.com/quinnQjc/yaband_sunmi_plugins.git'
   s.license          = { :file => '../LICENSE' }
   s.author           = { 'Your Company' => 'email@example.com' }
   s.source           = { :path => '.' }
