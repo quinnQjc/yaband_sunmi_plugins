@@ -63,7 +63,6 @@ class _MyAppState extends State<MyApp> {
 
   Future<void> pressPrint() async {
     try {
-      await YabandSunmiPlugins.printOrder();
     } on PlatformException {
     }
   }
