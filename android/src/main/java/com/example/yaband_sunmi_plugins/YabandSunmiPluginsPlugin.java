@@ -30,7 +30,6 @@ import io.flutter.plugin.common.MethodChannel.Result;
 import io.flutter.plugin.common.PluginRegistry.Registrar;
 
 import static android.hardware.usb.UsbManager.ACTION_USB_DEVICE_DETACHED;
-import static com.example.yaband_sunmi_plugins.Constant.MESSAGE_UPDATE_PARAMETER;
 
 /** YabandSunmiPluginsPlugin */
 public class YabandSunmiPluginsPlugin extends FlutterActivity implements FlutterPlugin, ActivityAware, MethodCallHandler  {
