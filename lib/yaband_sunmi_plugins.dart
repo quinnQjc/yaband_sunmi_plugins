@@ -12,20 +12,17 @@ class YabandSunmiPlugins {
     return version;
   }
 
-  static Future<void> printOrder() async {
-    String merchantName = "testmerchantName";
-    String storeName = "teststoreName";
-    Map<String,String> transactionDetailData = {'merchantName':merchantName,
-      'storeName':storeName,'storeAddress1':"storeAddress1",'storeAddress2':"storeAddress2",
-      'tradeId':"trade_id",
-      'method':"sub_pay_method",'description':"description",
-      'date': "created_at",
-      'amount':"currency",
-      'orderId':"order_id",
-    };
-    Map<String,Map<String,String>> sendData = {'data':transactionDetailData};
+  static Future<void> printTransactionDetail(Map<String,Map<String,dynamic>> sendData) async {
     try {
       final int result = await _channel.invokeMethod("printOrder",sendData);
+    } on PlatformException catch (e) {
+      print("Failed to Print : '${e.message}'.");
+    }
+  }
+
+  static Future<void> printSummary(Map<String,Map<String,String>> sendData) async {
+    try {
+      await _channel.invokeMethod("printSummay",sendData);
     } on PlatformException catch (e) {
       print("Failed to Print : '${e.message}'.");
     }

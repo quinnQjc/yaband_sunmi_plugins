@@ -75,6 +75,10 @@ public class YabandSunmiPluginsPlugin extends FlutterActivity implements Flutter
       /**打印交易详情*/
       Map<String,Object> transactionDetailData = call.argument("data");
       posPrintReceipt(transactionDetailData);
+    }else if(call.method.equals("printSummay")){
+      /**Pos打印统计*/
+      Map<String,String> summaryData = call.argument("data");
+      PosPrintSummaryReceipt(summaryData);
     }else {
       result.notImplemented();
     }
